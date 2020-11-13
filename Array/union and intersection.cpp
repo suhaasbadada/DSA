@@ -1,45 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-/*
 void PrintMerged(int arr1[],int arr2[],int m,int n){
 
-	int farr[7];
+	int i=0,j=0;
 
-	int indices=min(m,n);
-
-	int j=0;
-	int i;
-
-	for(i=0;i<indices;i++){
-		if(arr1[i]>arr2[i]){
-
-			farr[j]=arr2[i];
-			farr[j+1]=arr1[i];
-			
+	while(i<m && j<n){
+		if(arr1[i]<arr2[j]){
+			cout<<arr1[i++]<<" ";
 		}
-		else if(arr1[i]<arr2[i]){
-			farr[j]=arr1[i];
-			farr[j+1]=arr2[i];
-			
+		else if (arr2[j]<arr1[i]){
+			cout<<arr2[j++]<<" ";
 		}
-		else{
-			farr[j]=arr1[i];
-			
+		else
+		{
+			cout<<arr2[j++]<<" ";
+			i++;
 		}
-		
-		j+=2;
 	}
 
-	int farrlen=sizeof(farr)/sizeof(farr[0]);
-
-	for(i=0;i<7;i++){
-		cout<<farr[i]<<" ";
-	}
+	while (i < m) 
+        cout << arr1[i++] << " "; 
+  
+    while (j < n) 
+        cout << arr2[j++] << " "; 
 
 }
-
-*/
 
 void printIntersection(int arr1[],int arr2[],int m,int n){
 	int i=0,j=0;
