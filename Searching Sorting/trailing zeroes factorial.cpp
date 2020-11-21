@@ -3,11 +3,6 @@ using namespace std;
 
 // number of zeroes is equal to number of 5’s in prime factors of x!
 
-/*
-int trailingZeroesNum(int z){
-
-}
-*/
 int TrailingZeroes(int n){
 	int numberOfFives=0;
 	
