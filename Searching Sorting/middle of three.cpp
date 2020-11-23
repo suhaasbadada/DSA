@@ -21,5 +21,6 @@ int main(){
 	int b=30;
 	int c=40;
 
+	cout<<middleof3(a,b,c)<<" ";
 	return 0;
 }
