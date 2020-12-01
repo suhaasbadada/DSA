@@ -39,13 +39,7 @@ int CountReversals(string expression){
 		s.pop();
 	}
 
-	//cout<<n<<" "<<m;
-
-	//return n/2 + m/2;
 	return (reducedLen/2+n%2);
-
-	// both return statements are same
-
 }
 
 int main(){
