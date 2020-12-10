@@ -9,7 +9,6 @@ int main(){
 
 	int i;
 
-	int prev=C;
 	int Max1Row=0;
 	int max1s=0;
 
