@@ -63,8 +63,7 @@ int main(){
     double prize;
     cin>>prize;
     
-    vector <pair<int,string>> v1;
-    vector <pair<string,int>> v2;
+    vector <pair<string,int>> v;
     
     int i,n;
     cin>>n;
@@ -73,8 +72,7 @@ int main(){
         string player;
         int ind;
         cin>>player>>ind;
-        v1.push_back(make_pair(i+1,player));    //index,player pair
-        v2.push_back(make_pair(player,ind));    // player,throws to pair
+        v.push_back(make_pair(player,ind));    // player,throws to pair
     
     }
     
@@ -86,9 +84,9 @@ int main(){
     string s;
     
     while(f!=0){
-        s=v1[f-1].second;   // player who he throws to
+        s=v[f-1].first;   // player who he throws to
         order.push_back(s);
-        f=v2[f-1].second;    // index of who he throws to
+        f=v[f-1].second;    // index of who he throws to
     }
     
     int index;
@@ -104,3 +102,24 @@ int main(){
 
     return 0;
 }
+/*
+PYTHON CODE
+prize=int(input())
+n=int(input())
+arr1=[]
+arr2=[]
+
+for i in range(n):
+    l=input().split(' ')
+    arr1.append(l[0])
+    arr2.append(int(l[1]))
+f=int(input())
+p=input()
+order=[]
+while(f!=0):
+    s=arr1[f-1]
+    order.append(s)
+    f=arr2[f-1]
+index=(order.index(p))
+print("{:.2f}".format((100-2*(index))*prize/100))
+*/
