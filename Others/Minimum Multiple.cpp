@@ -12,7 +12,7 @@ int MinMultiple(vector <int> v,int multiple){
     int i,min=INT_MAX;
     for(i=0;i<v.size();i++){
         if(v[i]%multiple==0){
-            if(v[i]/multiple<min){
+            if(v[i]<min){
                 min=v[i];
             }
         }
