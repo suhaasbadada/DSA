@@ -5,7 +5,7 @@ using namespace std;
 int numberOfFactors(int num){
     int i;
     int count=2;
-    for(i=2;i<sqrt(num);i++){
+    for(i=2;i<num;i++){
         if(num%i==0){
             count++;
         }
